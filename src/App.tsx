@@ -166,6 +166,18 @@ export default function App() {
         return;
       }
 
+      // Cmd+X / Ctrl+X — cut selected items (copy then delete)
+      if ((e.metaKey || e.ctrlKey) && e.key === "x") {
+        if (inInput) return;
+        e.preventDefault();
+        const ids = selectedIdsRef.current;
+        if (ids.size === 0) return;
+        copyToClipboard(ids);
+        ids.forEach((id) => removeItem(id));
+        clearSelection();
+        return;
+      }
+
       // Cmd+V / Ctrl+V — paste clipboard
       if ((e.metaKey || e.ctrlKey) && e.key === "v") {
         if (inInput) return;

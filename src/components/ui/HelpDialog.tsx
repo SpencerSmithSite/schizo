@@ -14,6 +14,7 @@ const SHORTCUTS = [
   { group: "Selection" },
   { key: "⌘A / Ctrl+A", description: "Select all items" },
   { key: "⌘C / Ctrl+C", description: "Copy selected items" },
+  { key: "⌘X / Ctrl+X", description: "Cut selected items" },
   { key: "⌘V / Ctrl+V", description: "Paste items" },
   { key: "Del / Backspace", description: "Delete selected items or connection" },
   { key: "Escape", description: "Return to select mode" },
